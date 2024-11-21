@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'HomeScreen.dart';
+import 'home_screen.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -8,28 +8,28 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Color(0xFF2C2B34),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset("assets/car.png"),
-          Padding(
-            padding: const EdgeInsets.only(left: 35.0),
+          Image.asset("assets/car.png", cacheHeight: 580),
+           Padding(
+            padding: EdgeInsets.only(left: 65.0),
             child: Text(
               'Premium cars.\nEnjoy the luxury',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
-                fontSize: 27,
+                color: Colors.grey.shade300,
+                fontSize: 30,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 35.0),
+           Padding(
+            padding: const EdgeInsets.only(left: 65.0, top: 5),
             child: Text(
               'Premium and prestige car daily rental.\nExperience the thrill at a lower price',
-              style: TextStyle(color: Colors.black, fontSize: 12),
+              style: TextStyle(color: Colors.grey.shade500, fontSize: 14),
             ),
           ),
           const SizedBox(
@@ -40,18 +40,18 @@ class WelcomePage extends StatelessWidget {
               onTap: () => Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomePage())),
               child: Container(
-                width: 300,
+                width: 310,
                 height: 54,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(30),
                 ),
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: const Center(
                   child: Text(
                     "Let's Go",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 16),
                   ),
